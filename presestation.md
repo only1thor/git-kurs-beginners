@@ -33,3 +33,19 @@ git commit -m "first commit"
 ### Lets talk about the commit
 
 Contents of a commit:
+
+
+
+
+
+
+
+
+
+
+
+
+
+# rado notes
+- use local folder as remote. 
+- check out deleteme/{gittest,gitremote}
