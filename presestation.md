@@ -33,16 +33,50 @@ git commit -m "first commit"
 ### Lets talk about the commit
 
 Contents of a commit:
+    
+> <span style="color: yellow;">commit 0b21e560f5c5fdc844d5b916072e70cada58d583 (</span><span style="color: #66f;">**HEAD**</span> -> <span style="color: green;">**main**</span><span style="color: yellow;">)</span>  
+> <span style="color: green;">Author: only1thor &lt;&gt;</span>  
+> <span style="color: #66f;">Date: Thu Feb 20 10:07:33 2025 +0100</span>
+> 
+>>    legger til første linje
+> 
+> **diff --git a/Readme.md b/Readme.md**  
+> **index cf8977e..d6b9466 100644**  
+> **--- a/Readme.md**  
+> **+++ b/Readme.md**  
+> <span style="color: #66f;">@@ -1 +1,3 @@</span>  
+> <span> # Tittel</span>  
+> <span style="color: green;">+</span>  
+> <span style="color: green;">+linje 1</span>
 
 
 
 
 
 
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
