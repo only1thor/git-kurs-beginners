@@ -8,9 +8,12 @@ Har du en håndfull kommandoer du har memorisert, og går aldri utforbi det?
 har du noen gang kopiert ut filer for så å slette, og klone på nytt?
 
 
-Git ekan brukes uten forståelse for datastrukturen. og i dag vi ljeg hjelpe dere å forstå hvordan git fungerer.
+Git kan brukes uten forståelse for datastrukturen.
+Men i dag vil jeg hjelpe dere å få en mental modell hvordan git fungerer.
 
-Dette vil gi dere muligheten til å kunnen forutse merge konflikter, og ☠ 
+Dette vil gi dere muligheten til å kunnen forutse merge konflikter, og ☠
+
+
 
 ## Saken historisk perspektiv (4)
 Git kom etter en rekke med andre versjonskontroll systemer. 
