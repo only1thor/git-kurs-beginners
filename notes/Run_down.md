@@ -2,11 +2,25 @@
 live session on git rebase and mental model. 
 
 
-## TODO 
-git rebase with no conflicts
+## Introduction
+XKCD `#1597` - Git.
+
+example of a crazy git tree.
+(branch, merge in main, rebase, and oopsie!)
+
+
+
+## git rebase with no conflicts
 
 points to hit:
-- checksums change
-- changes from main in branch
-- remote push requires force
+- 🔢 Checksums change
+- 🔄 Changes from main in branch
+- 🚀 Remote push requires force
 
+
+## git rebase with conflicts
+
+points to hit:
+- 🛑 Same line changed
+- 🛠️ Git prompts resolution
+- 🔄 Resolve each commit
