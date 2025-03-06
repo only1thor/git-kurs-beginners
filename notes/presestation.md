@@ -4,7 +4,7 @@ In this presentation I want to share an intuition for how git works.
 
 I want you to be able to visualize how the tree "grows" while you create `commits`, and changes when you `merge`, or even `reset` and `rebase`.
 
-![most git users do not understand git, and just delete the repo and clone again when they get stuck](https://imgs.xkcd.com/comics/git.png)
+![most git users do not understand git, and just delete the repo and clone again when they get stuck. ref. xkcd.com/1597/](https://imgs.xkcd.com/comics/git.png)
 
 ## The basics
 
