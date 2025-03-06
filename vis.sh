@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git_command="watch --no-title --interval 2 -c 'printf \"\e[1;33mUntracked Files:\e[0m\n\"
+git_command="watch --no-title --interval 1 -c 'printf \"\e[1;33mUntracked Files:\e[0m\n\"
 git ls-files --others --exclude-standard | while read -r file; do
     printf \"\e[33m  %s\e[0m\n\" \"\$file\"
 done
@@ -21,7 +21,7 @@ printf \"\n\e[1;34mCommit History:\e[0m\n\"
 git log --graph --oneline --all --decorate --color=always'"
 
 if [[ "$1" =~ ^-[rR]$ ]]; then
-    git_command="watch --no-title --interval 2 -c 'printf \"\n\e[1;34mCommit History:\e[0m\n\"
+    git_command="watch --no-title --interval 1 -c 'printf \"\n\e[1;34mCommit History:\e[0m\n\"
     git log --graph --oneline --all --decorate --color=always'"
 fi
 
