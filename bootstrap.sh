@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Set the absolute path of vis.sh as a variable
-VIS_PATH="$PWD/vis.sh"
 
 # Create a unique temporary directory for both repositories
 temp_dir=$(mktemp -d -t repos-XXXXXXXXXX)
@@ -13,7 +11,7 @@ tar -xvf media/repo.tar -C "$temp_dir"
 REPO_NAME=$(basename $(tar -tf media/repo.tar | head -1))
 
 # Path to the untarred repository
-untarred_repo="$temp_dir/$REPO_NAME"
+untarred_repo="$temp_dir/$REPO_NAME/"
 
 # Path to the remote bare repository
 remote_repo="$temp_dir/remote_repo"
@@ -21,8 +19,14 @@ remote_repo="$temp_dir/remote_repo"
 # Create a bare repository in the same temporary directory
 git init --bare "$remote_repo"
 
+# copy vis.sh to the temporary directory
+cp vis.sh "$temp_dir"
+
 # Change to the untarred repository directory
 cd "$untarred_repo"
+
+# Set the absolute path of vis.sh as a variable
+VIS_PATH="$PWD/vis.sh"
 
 # Add the bare repo as remote origin
 git remote add origin "$remote_repo"
@@ -50,9 +54,9 @@ tmux send-keys -t repo_session:0.0 "function fish_prompt
 tmux split-window -h -t repo_session:0.0
 tmux send-keys -t repo_session:0.1 "cd $untarred_repo && bash $VIS_PATH" C-m
 
-# Create the bottom-left pane with a shell with nano
+# Create the bottom-left pane with a shell with micro
 tmux split-window -v -t repo_session:0.0
-tmux send-keys -t repo_session:0.1 "cd $untarred_repo && nano Readme.md" C-m
+tmux send-keys -t repo_session:0.1 "cd $untarred_repo && micro Readme.md" C-m
 
 # Attach to the tmux session
 tmux attach-session -t repo_session
