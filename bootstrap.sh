@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set the absolute path of vis.sh as a variable
+VIS_PATH="$PWD/vis.sh"
+
 # Create a unique temporary directory for both repositories
 temp_dir=$(mktemp -d -t repos-XXXXXXXXXX)
 
@@ -28,9 +31,24 @@ git remote add origin "$remote_repo"
 git push origin --all
 git push origin --tags
 
-echo "set -gx GV $PWD/vis.sh" | fish
-
 # Output the paths for reference
 echo "Temporary directory: $temp_dir"
 echo "Untarred repository: $untarred_repo"
 echo "Remote repository: $remote_repo"
+
+# Start tmux session
+tmux new-session -d -s repo_session
+
+# Set initial pane to the untarred repository
+tmux send-keys -t repo_session:0.0 "cd $untarred_repo && clear" C-m
+
+# Create the left pane with vis.sh
+tmux split-window -h -t repo_session:0.0
+tmux send-keys -t repo_session:0.1 "cd $untarred_repo && bash $VIS_PATH" C-m
+
+# Create the bottom-left pane with a shell with nano
+tmux split-window -v -t repo_session:0.0
+tmux send-keys -t repo_session:0.1 "cd $untarred_repo && nano Readme.md" C-m
+
+# Attach to the tmux session
+tmux attach-session -t repo_session
