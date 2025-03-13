@@ -40,7 +40,11 @@ echo "Remote repository: $remote_repo"
 tmux new-session -d -s repo_session
 
 # Set initial pane to the untarred repository
-tmux send-keys -t repo_session:0.0 "cd $untarred_repo && clear" C-m
+tmux send-keys -t repo_session:0.0 "function fish_prompt
+    fish_git_prompt
+  end;
+  set fish_autosuggestion_enabled 0;
+  clear" C-m
 
 # Create the left pane with vis.sh
 tmux split-window -h -t repo_session:0.0
