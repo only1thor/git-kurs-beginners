@@ -1,6 +1,7 @@
 # Git presentation
 
 In this presentation I want to share an intuition for how git works.
+yeah.
 
 I want you to be able to visualize how the tree "grows" while you create `commits`, and changes when you `merge`, or even `reset` and `rebase`.
 
