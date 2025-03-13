@@ -26,3 +26,9 @@ points to hit:
 - 🛑 Same line changed
 - 🛠️ Git prompts resolution
 - 🔄 Resolve each commit
+
+## oppsummert
+
+- git bygger et tre
+- tenk på treet du bygger
+- oppsøk måter å bruke git til å gjøre det du vil. 
