@@ -10,6 +10,20 @@ XKCD `#1597` - Git.
 example of a crazy git tree.
 (branch, merge in main, rebase, and oopsie!)
 
+## Prerequisite knowlege
+
+- Basic git usage
+  - commit
+  - branch
+  - merge
+
+
+## Important points
+
+- Visualization
+- Commit hash
+- Head
+- Text editor
 
 
 ## git rebase with no conflicts
